@@ -1,3 +1,6 @@
+/*
+coded by Eng.Mohamed Abohasha 12/2023
+*/
 #include <stdio.h>
 #include <string.h>
   struct student {
