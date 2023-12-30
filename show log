@@ -1,0 +1,130 @@
+[33mcommit 03e04100bd65894d085775441f47a2c3814f69d9[m
+Author: mkabohasha <mkabohasha@gmail.com>
+Date:   Sat Dec 30 16:04:10 2023 +0200
+
+    First commit
+
+[1mdiff --git a/C_Basics/.Untitled1.c b/C_Basics/.Untitled1.c[m
+[1mnew file mode 100644[m
+[1mindex 0000000..f1e28a9[m
+[1m--- /dev/null[m
+[1m+++ b/C_Basics/.Untitled1.c[m
+[36m@@ -0,0 +1,6 @@[m
+[32m+[m
+[32m+[m[32m#include<stdio.h>[m
+[32m+[m[32mint(main)[m
+[32m+[m[32m{[m
+[32m+[m[32m    printf("hello");[m
+[32m+[m[32m}[m
+[1mdiff --git a/C_Basics/pointer.c b/C_Basics/pointer.c[m
+[1mnew file mode 100644[m
+[1mindex 0000000..379026e[m
+[1m--- /dev/null[m
+[1m+++ b/C_Basics/pointer.c[m
+[36m@@ -0,0 +1,16 @@[m
+[32m+[m[32m#include <stdio.h>[m
+[32m+[m[32mint add (int x , int y);[m
+[32m+[m[32mvoid main (){[m
+[32m+[m
+[32m+[m[32m  int (*ptr) (int , int);[m
+[32m+[m[32m  ptr = &add;[m
+[32m+[m[32m  int z = add(5,6);[m
+[32m+[m[32m  printf("\n%d",z);[m
+[32m+[m[32m  printf("\n%d",ptr(4,6));[m
+[32m+[m
+[32m+[m[32m}[m
+[32m+[m[32mint add (int x , int y){[m
+[32m+[m[32m    int a = x + y ;[m
+[32m+[m[32m    return a;[m
+[32m+[m[32m}[m
+[32m+[m
+[1mdiff --git a/C_Basics/revesion_1.c b/C_Basics/revesion_1.c[m
+[1mnew file mode 100644[m
+[1mindex 0000000..fe6d5d1[m
+[1m--- /dev/null[m
+[1m+++ b/C_Basics/revesion_1.c[m
+[36m@@ -0,0 +1,28 @@[m
+[32m+[m[32m#include <stdio.h>[m
+[32m+[m[32m#include <string.h>[m
+[32m+[m[32mvoid main ()[m
+[32m+[m[32m{[m
+[32m+[m[32m    char n [15] , p[15] ;[m
+[32m+[m[32m    char name [4] [15] = {{"Mohamed"},{"Ali"},{"Mohsen"},{"waleed"}};[m
+[32m+[m[32m    char pass [4] [15] = {{"1"},{"2"},{"3"},{"4"}};[m
+[32m+[m
+[32m+[m[32m    printf("\nEnter Your Name:");[m
+[32m+[m[32m    gets(n);[m
+[32m+[m[32m    printf("\nEnter Your Pass:");[m
+[32m+[m[32m    gets(p);[m
+[32m+[m
+[32m+[m
+[32m+[m[32m    for(int i = 0 ; i < 4 ; i++){[m
+[32m+[m[32m        if (strcmp(name[i],n) == 0){[m
+[32m+[m[32m                if (strcmp(pass[i0],p) == 0){[m
+[32m+[m[32m                    printf("hello %s ^~^",n);[m
+[32m+[m[32m                    break;[m
+[32m+[m[32m               }[m
+[32m+[m[32m               else{[m
+[32m+[m[32m                     printf("you entered wrong pass");[m
+[32m+[m[32m                     break;[m
+[32m+[m[32m                    }[m
+[32m+[m[32m         }else printf("\n name not exist"); break;[m
+[32m+[m[32m}[m
+[32m+[m[32m            }[m
+[32m+[m
+[1mdiff --git a/string.c b/string.c[m
+[1mnew file mode 100644[m
+[1mindex 0000000..4af0df1[m
+[1m--- /dev/null[m
+[1m+++ b/string.c[m
+[36m@@ -0,0 +1,8 @@[m
+[32m+[m[32m#include<stdio.h>[m
+[32m+[m[32mvoid main ()[m
+[32m+[m[32m{[m
+[32m+[m[32m    char s[20];[m
+[32m+[m[32m    printf("Enter the string?");[m
+[32m+[m[32m    scanf("%[^\.]s",s);[m
+[32m+[m[32m    printf("You entered %s",s);[m
+[32m+[m[32m}[m
+[1mdiff --git a/struct.c b/struct.c[m
+[1mnew file mode 100644[m
+[1mindex 0000000..a48c77b[m
+[1m--- /dev/null[m
+[1m+++ b/struct.c[m
+[36m@@ -0,0 +1,36 @@[m
+[32m+[m[32m#include <stdio.h>[m
+[32m+[m[32m#include <string.h>[m
+[32m+[m[32m  struct student {[m
+[32m+[m[32m        char name [15];[m
+[32m+[m[32m        int age ;[m
+[32m+[m[32m        int Class ;[m
+[32m+[m[32m    }std1 ,std2 ,std3 ;[m
+[32m+[m
+[32m+[m[32m    typedef struct car {[m
+[32m+[m[32m        char brand [10];[m
+[32m+[m[32m        int price ;[m
+[32m+[m[32m    }Care_Data ;[m
+[32m+[m
+[32m+[m[32m    typedef enum {[m
+[32m+[m[32m        saterday,[m
+[32m+[m[32m        sunday,[m
+[32m+[m[32m        monday,[m
+[32m+[m[32m    }days;[m
+[32m+[m[32mvoid main (){[m
+[32m+[m[32m    struct student std1 = {"Mohamed",15,3};[m
+[32m+[m[32m    printf("\n student name: %s \n student age:%d \n student class:%d",std1.name,std1.age,std1.Class);[m
+[32m+[m
+[32m+[m[32m    std2.age = 10 ;[m
+[32m+[m[32m    std2.Class = 3 ;[m
+[32m+[m[32m   strcpy(std2.name,"Ali");      // std2.name [15] = "ali";[m
+[32m+[m
+[32m+[m[32m    printf("\n student name: %s \n student age:%d \n student class:%d",std2.name,std2.age,std2.Class);[m
+[32m+[m
+[32m+[m[32m    Care_Data car1 ;[m
+[32m+[m[32m    car1.price = 12;[m
+[32m+[m[32m    printf("\n %d",car1.price);[m
+[32m+[m
+[32m+[m[32m    days D1 ;[m
+[32m+[m[32m    D1 = monday;[m
+[32m+[m[32m    printf("\n %d",D1);[m
+[32m+[m[32m}[m
